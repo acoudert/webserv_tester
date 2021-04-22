@@ -17,7 +17,7 @@ def fileConf():
     print("\t2. /pythonTest/noperm.html has 400 as perms")
     
     print("\t3. A location / pointing to /pythonTest:")
-    print("\t\t- Accepted Methods: GET")
+    print("\t\t- Accepted Methods: GET HEAD")
     print("\t\t- Autoindex: on")
     
     print("\t4. A location /ipointtodir pointing to /pythonTest/dir:")
@@ -25,8 +25,9 @@ def fileConf():
     print("\t\t- Autoindex: on")
     
     print("\t5. A location /cgi pointing to /pythonTest/sh :")
-    print("\t\t- Accepted Methods: GET POST")
+    print("\t\t- Accepted Methods: GET HEAD POST")
     print("\t\t- Autoindex: off")
     print("\t\t- index: index.sh")
     print("\t\t- cgi: /bin/sh for all *.sh")
+    print("\t\t- max body size: 500")
     input("Press Enter: ")

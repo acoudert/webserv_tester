@@ -21,6 +21,11 @@ def malformed_test(port):
     malformed.malformed(port)
     enter()
 
+def no_space_test(port):
+    from . import no_space
+    no_space.no_space(port)
+    enter()
+
 def too_long_test(port):
     from . import too_long
     too_long.too_long(port)
