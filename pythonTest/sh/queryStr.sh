@@ -1,0 +1,1 @@
+echo $QUERY_STRING
