@@ -1,11 +1,6 @@
 def enter():
     input("Press Enter: ")
 
-def char_by_char_test(port):
-    from . import char_by_char
-    char_by_char.char_by_char(port)
-    enter()
-
 def no_host_test(port):
     from . import no_host
     no_host.no_host(port)
@@ -39,5 +34,10 @@ def two_hosts_test(port):
 def timeout_test(port):
     from . import timeout
     timeout.timeout(port)
+    enter()
+
+def char_by_char_test(port):
+    from . import char_by_char
+    char_by_char.char_by_char(port)
     enter()
 

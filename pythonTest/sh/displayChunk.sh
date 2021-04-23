@@ -1,0 +1,2 @@
+read body
+echo $body

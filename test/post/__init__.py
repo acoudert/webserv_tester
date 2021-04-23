@@ -1,6 +1,11 @@
 def enter():
     input("Press Enter: ")
 
+def post_as_get_test(port):
+    from . import post_as_get
+    post_as_get.post_as_get(port)
+    enter()
+
 def chunk_size0_test(port):
     from . import chunk_size0
     chunk_size0.chunk_size0(port)
@@ -54,5 +59,15 @@ def urlencoded_size501_test(port):
 def formdata_size0_test(port):
     from . import formdata_size0
     formdata_size0.formdata_size0(port)
+    enter()
+
+def formdata_size500_test(port):
+    from . import formdata_size500
+    formdata_size500.formdata_size500(port)
+    enter()
+
+def formdata_size501_test(port):
+    from . import formdata_size501
+    formdata_size501.formdata_size501(port)
     enter()
 

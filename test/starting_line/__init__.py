@@ -21,16 +21,6 @@ def no_version_test(port):
     no_version.no_version(port)
     enter()
 
-def dir_traversal1_test(port):
-    from . import dir_traversal
-    dir_traversal.dir_traversal1(port)
-    enter()
-
-def dir_traversal2_test(port):
-    from . import dir_traversal
-    dir_traversal.dir_traversal2(port)
-    enter()
-
 def not_a_uri_test(port):
     from . import not_a_uri
     not_a_uri.not_a_uri(port)
@@ -54,5 +44,10 @@ def no_method_test(port):
 def no_starting_line_test(port):
     from . import no_starting_line
     no_starting_line.no_starting_line(port)
+    enter()
+
+def four_elems_test(port):
+    from . import four_elems
+    four_elems.four_elems(port)
     enter()
 

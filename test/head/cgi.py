@@ -31,13 +31,13 @@ def getHeadComp(port, uri):
 
 def cgi(port):
     pages = [
-            "/sh",
-            "/sh/",
-            "/sh/hello.sh",
-            "/sh/emptyCGIOutput.sh",
-            "/sh/helloLong.sh",
-            "/sh/envVar.sh",
-            "/sh/queryStr.sh"
+            "/cgi",
+            "/cgi/",
+            "/cgi/hello.sh",
+            "/cgi/emptyCGIOutput.sh",
+            "/cgi/helloLong.sh",
+            "/cgi/envVar.sh",
+            "/cgi/queryStr.sh"
         ]
     for page in pages:
         getHeadComp(port, page)

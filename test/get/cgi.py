@@ -41,13 +41,13 @@ def cgiRequest(port, uri, expected, expectedBody = False, contentLength = False,
 
 def cgi(port):
     pages = [
-            ["/sh", "Content of index.sh", "Index\n", False, False],
-            ["/sh/", "Content of index.sh", "Index\n", False, False],
-            ["/sh/hello.sh", "Content of hello.sh", "Hello\n", False, False],
-            ["/sh/emptyCGIOutput.sh", "No Freeze, No Crash", "", False, False],
-            ["/sh/helloLong.sh", "Content-Length of 1300000", False, "1300000", False],
-            ["/sh/envVar.sh", "Check body contains all request headers", False, False, False],
-            ["/sh/queryStr.sh", "Content of Query String Var", "name=John&id=10\n", False, 
+            ["/cgi", "Content of index.sh", "Index\n", False, False],
+            ["/cgi/", "Content of index.sh", "Index\n", False, False],
+            ["/cgi/hello.sh", "Content of hello.sh", "Hello\n", False, False],
+            ["/cgi/emptyCGIOutput.sh", "No Freeze, No Crash", "", False, False],
+            ["/cgi/helloLong.sh", "Content-Length of 1300000", False, "1300000", False],
+            ["/cgi/envVar.sh", "Check body contains all request headers", False, False, False],
+            ["/cgi/queryStr.sh", "Content of Query String Var", "name=John&id=10\n", False, 
                 {"name": "John", "id": "10"} ]
         ]
     for page in pages:

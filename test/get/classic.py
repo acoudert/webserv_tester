@@ -26,7 +26,7 @@ def classic(port):
             ["", "Autoindex"],
             ["/dir/indexDir.html", "Content of indexDir.html"],
             ["/ipointtodir/indexDir.html", "Content of indexDir.html"],
-            ["/dir/", "Error"],
+            ["/dir/", "autoindex of dir"],
             ["/dir/subdir/emptyFile.html", "No Body - No Crash - No Infinite Loop"],
             ["/text.txt", "Content of text.txt"],
             ["/idonotexist", "Error"]

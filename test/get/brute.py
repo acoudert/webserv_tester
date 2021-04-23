@@ -31,9 +31,9 @@ def brute(port):
             [rhost + str(port) + "/", 8, 20, 200],
             [rhost + str(port) + "/bla", 8, 20, 404],
             [rhost + str(port) + "/text.txt", 8, 20, 200],
-            [rhost + str(port) + "/sh/hello.sh", 8, 20, 200],
+            [rhost + str(port) + "/cgi/hello.sh", 8, 20, 200],
             [rhost + str(port) + "/text.txt", 100, 200, 200],
-            [rhost + str(port) + "/sh/hello.sh", 100, 200, 200],
+            [rhost + str(port) + "/cgi/hello.sh", 100, 200, 200],
         ]
     for i in range(len(args)):
         thread_launcher(args[i][0], args[i][1], args[i][2], args[i][3])
