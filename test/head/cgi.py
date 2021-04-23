@@ -11,6 +11,7 @@ def getHeadComp(port, uri):
     print(green + "Expected: No FAILURE" + nc)
     r1 = requests.get(rhost + str(port) + uri)
     r2 = requests.head(rhost + str(port) + uri)
+    print(blue + "Get headers: " + nc)
     for key1 in r1.headers.keys():
         print (key1 + ": " + r1.headers[key1])
     print(blue + "Head headers: " + nc)
@@ -31,12 +32,10 @@ def getHeadComp(port, uri):
 
 def cgi(port):
     pages = [
-            "/cgi",
             "/cgi/",
             "/cgi/hello.sh",
             "/cgi/emptyCGIOutput.sh",
             "/cgi/helloLong.sh",
-            "/cgi/envVar.sh",
             "/cgi/queryStr.sh"
         ]
     for page in pages:
