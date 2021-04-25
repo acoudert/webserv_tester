@@ -14,8 +14,8 @@ import servers
 import security
 
 stdin
-
 usage.checkArgv(argv)
+stdin
 usage.fileConf()
 
 port = int(argv[1])
