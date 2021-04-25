@@ -18,7 +18,10 @@ def thread_ft(port, toSend):
         allS.append(s)
     for i in range(10):
         for j in range(100):
-            allS[j].send(bytes(str(toSend[i]), encoding="utf-8"))
+            try:
+                allS[j].send(bytes(str(toSend[i]), encoding="utf-8"))
+            except:
+                continue
         time.sleep(1)
 
 def dos(port):
@@ -36,7 +39,10 @@ def dos(port):
     toSend.append("0\r\n\r\n")
     threads = []
     print(red + "Test Dos Attack" + nc)
+    print(blue + "Ensure your server is launched without slowloris protection neither timeout" + nc)
+    print(blue + "The purpose of this test is to exceed your nb of fds" + nc)
     print(green + "Expected: No Crash" + nc) 
+    input("Press Enter: ")
     for i in range(8):
         thread = threading.Thread(target = thread_ft, args=(port, toSend))
         thread.start()

@@ -1,4 +1,5 @@
 import os
+import sys
 
 def displayUsage():
     print("Usage: python3 main.py [port_nb]")
@@ -64,4 +65,4 @@ def fileConf():
     print("\t\t\t- Autoindex: off")
     print("\t\t\t- index: index.html")
     
-    input("Press Enter: ")
+    input("Press enter: ")

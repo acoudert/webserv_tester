@@ -9,7 +9,7 @@ nc = "\033[0m"
 
 def no_host(port):
     print(red + "Test No Host" + nc)
-    print(green + "Expected: No Crash" + nc)
+    print(green + "Expected: No Crash + Status Code = 200" + nc)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((TCP_IP, port))
     toSend = "GET / HTTP/1.0\r\n\r\n"

@@ -1,5 +1,6 @@
 import os
 from sys import argv
+from sys import stdin
 
 import usage
 import starting_line
@@ -11,6 +12,8 @@ import put
 import error_pages
 import servers
 import security
+
+stdin
 
 usage.checkArgv(argv)
 usage.fileConf()

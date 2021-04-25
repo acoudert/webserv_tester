@@ -10,7 +10,7 @@ nc = "\033[0m"
 
 def slowloris(port):
     print(red + "Test Slowloris Attack" + nc)
-    print(green + "Expected: Timeout + CPU not full time at 100%" + nc)
+    print(green + "Expected: Broken pipe + CPU not full time at 100%" + nc)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((TCP_IP, port))
     toSend = "POST /cgiBis/hello.sh HTTP/1.1\r\nHost: localhost:" + str(port) + "\r\n"
@@ -25,7 +25,8 @@ def slowloris(port):
     try:
         for i in toSend:
             s.send(bytes(str(i), encoding="utf-8"))
-            time.sleep(20)
+            print(str(i))
+            time.sleep(0.1)
     except Exception as e:
         print(repr(e))
     s.close()

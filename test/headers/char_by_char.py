@@ -10,7 +10,9 @@ nc = "\033[0m"
 
 def char_by_char(port):
     print(red + "Test Char By Char" + nc)
+    print(blue + "Ensure your server is launched without slowloris protection" + nc)
     print(green + "Expected: No Error" + nc)
+    input("Press Enter: ")
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((TCP_IP, port))
     sent = ""

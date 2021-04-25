@@ -9,7 +9,7 @@ nc = "\033[0m"
 
 def timeout(port):
     print(red + "Test Timeout" + nc)
-    print(green + "Expected: Closed Connection" + nc)
+    print(green + "Expected: Closed Connection | no CPU full time 100%" + nc)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((TCP_IP, port))
     toSend = "GET / HTTP/1.1\r\nHost: localhost: " + str(port) + "\r\n"
@@ -18,7 +18,6 @@ def timeout(port):
     try:
         s.send(bytes(toSend, encoding="utf-8"))
         data = s.recv(1000)
-        print(blue + "FAILURE" + nc)
         s.close()
     except Exception as e:
         print(repr(e))
