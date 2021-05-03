@@ -9,7 +9,7 @@ nc = "\033[0m"
 
 def two_hosts(port):
     print(red + "Test Two Hosts" + nc)
-    print(green + "Expected: No Error" + nc)
+    print(green + "Expected: Error" + nc)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((TCP_IP, port))
     toSend = "GET / HTTP/1.1\r\nHost: localhost:" + str(port) + "\r\nHost: localhost:" + str(port) + "\r\n\r\n"
