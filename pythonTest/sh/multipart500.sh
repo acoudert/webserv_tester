@@ -1,6 +1,6 @@
 printf "Content-Type: text/plain\r\n\r\n"
 i=0
-while [ $i != 17 ]
+while [ $i != 15 ]
 do
 	read line
 	echo $line
