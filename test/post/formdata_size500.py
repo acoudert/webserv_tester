@@ -9,7 +9,7 @@ nc = "\033[0m"
 
 def formdata_size500(port):
     print(red + "Test Formdata Size 500" + nc)
-    print(green + "Expected: Content-Length = 409" + nc)
+    print(green + "Expected: Content-Length = 437 && Content-Type: text/plain" + nc)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((TCP_IP, port))
     toSend = "POST /cgi/multipart500.sh HTTP/1.1\r\nHost: localhost:" + str(port) + "\r\n"
